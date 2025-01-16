@@ -65,7 +65,7 @@ content:
     layout: list
     content:
       - layout: left
-        title: E2Map: Experience-and-Emotion Map for Self-Reflective Robot Navigation with Language Models
+        title: "E2Map: Experience-and-Emotion Map for Self-Reflective Robot Navigation with Language Models"
         sub_title: Published Research
         link: https://e2map.github.io/
         link_text: Project Page
