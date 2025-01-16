@@ -66,7 +66,7 @@ content:
     content:
       - layout: left
         title: "E2Map: Experience-and-Emotion Map for Self-Reflective Robot Navigation with Language Models"
-        sub_title: Published Research
+        # sub_title: Published Research
         link: https://e2map.github.io/
         link_text: Project Page
         additional_links:
@@ -116,20 +116,16 @@ content:
   - title: Education
     layout: list
     content:
-      - layout: top-right
+      - layout: left
         title: Seoul National University
         sub_title: M.S. in Smart Urban Engineering
         caption: Mar. 2024 - Present
-        quote: >
-          Advised by Prof. Seong-Woo Kim
         description: |
-          Focus on Smart Urban Engineering in the Department of Civil and Environmental Engineering.
-      - layout: top-right
+          **Advised by Prof. Seong-Woo Kim**  <!-- Markdown 스타일 적용 -->
+      - layout: left
         title: Korea University
         sub_title: B.S. in Mechanical Engineering
         caption: Mar. 2019 - Feb. 2024
-        description: |
-          Completed coursework and research in Mechanical Engineering.
       # - layout: top-right
       #   title: Inha University
       #   sub_title: Coursework in Mechanical Engineering
