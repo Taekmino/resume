@@ -192,3 +192,62 @@ p.quote {
     margin-top: 1rem;
   }
 }
+
+/* Education 섹션 스타일 */
+.education .details {
+  text-align: left;
+  margin-bottom: 20px;
+
+  h4 {
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .period {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 5px;
+  }
+
+  .major {
+    font-size: 1.5rem;
+    color: #969090;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Publications 섹션 스타일 */
+.publication .details {
+  text-align: center;
+  margin-bottom: 30px;
+
+  h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .authors {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #ddd;
+  }
+
+  .link a {
+    font-size: 1.1rem;
+    color: #007acc;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

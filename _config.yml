@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Mintaek Oh
-title: Master's Student in Smart Urban Engineering
+title: Master's Student
 email: mintaek@snu.ac.kr
 # email_title: Email (Email title override)
 # phone: Your phone number (optional)
@@ -34,10 +34,10 @@ linkedin_username: mintaekoh
 # googlescholar_username: D847cGsAAAAJ
 
 # Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
+# additional_links:
+# - title: Link name
+#   icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+#   url: Link url (eg. https://google.com)
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -59,24 +59,47 @@ about_content: | # this will include new lines to allow paragraphs
     - **Control**: Researching control systems for stable and efficient robotics.
     - **Large Language Models (LLM)**: Exploring the integration of LLMs into robotics.
 
+
 content:
   # Publications
   - title: Publications
     layout: list
     content:
-      - layout: left
+      - layout: center
+        type: publication
         title: "E2Map: Experience-and-Emotion Map for Self-Reflective Robot Navigation with Language Models"
-        # sub_title: Published Research
+        authors: "Chan Kim, Keonwoo Kim, Mintaek Oh, Hanbi Baek, Jiyang Lee, Donghwi Jung, Soojin Woo, Younkyung Woo, John Tucker, Roya Firoozi, Seung-Woo Seo, Mac Schwager, Seong-Woo Kim"
         link: https://e2map.github.io/
-        link_text: Project Page
         additional_links:
           - title: GitHub Repository
             icon: fab fa-github
             url: https://github.com/knwoo/e2map
         description: |
-          **Authors**: Chan Kim, Keonwoo Kim, Mintaek Oh, Hanbi Baek, Jiyang Lee, Donghwi Jung, Soojin Woo, 
-          Younkyung Woo, John Tucker, Roya Firoozi, Seung-Woo Seo, Mac Schwager, Seong-Woo Kim  
-          
+          This research introduces a novel approach to robot navigation, leveraging experience and emotion mapping powered by Large Language Models (LLMs).
+  
+    # Education
+  - title: Education
+    layout: list
+    content:
+      - layout: left
+        type: education
+        title: Seoul National University
+        sub_title: M.S. in Smart Urban Engineering
+        caption: Mar. 2024 - Present
+        description: |
+          **Advised by Prof. Seong-Woo Kim**
+      - layout: left
+        type: education
+        title: Korea University
+        sub_title: B.S. in Mechanical Engineering
+        caption: Mar. 2019 - Feb. 2024
+      - layout: top-right
+        type: education
+        title: Inha University
+        sub_title: Coursework in Mechanical Engineering
+        caption: Mar. 2017 - Feb. 2019
+
+
   # - title: Projects # Title for the section
   #   layout: list # Type of content section (list/text)
   #   content:
@@ -110,26 +133,6 @@ content:
   #         Short description of the company (optional)
   #       description: | # this will include new lines to allow paragraphs
   #         Description of role
-  
-
-  # Education
-  - title: Education
-    layout: list
-    content:
-      - layout: left
-        title: Seoul National University
-        sub_title: M.S. in Smart Urban Engineering
-        caption: Mar. 2024 - Present
-        description: |
-          **Advised by Prof. Seong-Woo Kim**  <!-- Markdown 스타일 적용 -->
-      - layout: left
-        title: Korea University
-        sub_title: B.S. in Mechanical Engineering
-        caption: Mar. 2019 - Feb. 2024
-      # - layout: top-right
-      #   title: Inha University
-      #   sub_title: Coursework in Mechanical Engineering
-      #   caption: Mar. 2017 - Feb. 2019
 
 
 # Footer
