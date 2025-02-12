@@ -52,7 +52,7 @@ linkedin_username: mintaekoh
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  I am Mintaek Oh, a master's student in the Department of Civil and Environmental Engineering at Seoul National University, specializing in Smart Urban Engineering. I am advised by Prof. Seong-Woo Kim.
+  I am Mintaek Oh, a master's student in the Department of Civil and Environmental Engineering at Seoul National University, specializing in Smart Urban Engineering. I am advised by [Prof. Seong-Woo Kim](https://arisnu.squarespace.com/director).
   
   Research Interests
     - **Planning**: Developing advanced path-planning algorithms for robots and autonomous systems.
@@ -74,6 +74,9 @@ content:
           - title: GitHub Repository
             icon: fab fa-github
             url: https://github.com/knwoo/e2map
+          - title: ArXiv Paper
+            icon: fas fa-file-pdf
+            url: https://arxiv.org/abs/2409.10027
         description: |
           This research introduces a novel approach to robot navigation, leveraging experience and emotion mapping powered by Large Language Models (LLMs).
   
@@ -87,7 +90,7 @@ content:
         sub_title: M.S. in Smart Urban Engineering
         caption: Mar. 2024 - Present
         description: |
-          **Advised by Prof. Seong-Woo Kim**
+          **Advised by [Prof. Seong-Woo Kim](https://arisnu.squarespace.com/director)**
       - layout: left
         type: education
         title: Korea University
