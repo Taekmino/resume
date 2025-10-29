@@ -1,27 +1,98 @@
 {% for item in include.content %}
+  {% if item.type == 'publication-year' %}
+  <div class="row clearfix publication-year">
+    <div class="col-xs-12">
+      <h2 class="year-title">{{ item.year }}</h2>
+    </div>
+  </div>
+  {% elsif item.type == 'publication' %}
+  <div class="row clearfix layout layout-{{item.layout | default: 'left'}} border-{{item.border | default: 'no'}} publication">
+    <div class="col-xs-12 details">
+      <!-- Publication Entry -->
+      <div class="publication-entry">
+        <div class="pub-title-line">
+          {% if item.title %}
+            <span class="pub-title">{{ item.title }}</span>
+          {% endif %}
+          
+          <span class="pub-links-inline">
+            {% if item.link %}
+              {% include a.html href=item.link class="pub-link" %}
+                {%- if item.link_text -%}{{ item.link_text }}{%- else -%}Paper{%- endif -%}
+              </a>
+            {% endif %}
+            
+            {% if item.additional_links %}
+              {% for link in item.additional_links %}
+                {% include a.html href=link.url class="pub-link" %}
+                  <i class="{{ link.icon }}"></i> {{ link.title }}
+                </a>
+              {% endfor %}
+            {% endif %}
+          </span>
+        </div>
+        
+        {% if item.authors %}
+          <p class="pub-authors">{{ item.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+        {% endif %}
+        
+        {% if item.venue %}
+          <p class="pub-venue">{{ item.venue }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% elsif item.type == 'education' %}
+  <div class="row clearfix education-item">
+    <div class="col-xs-12">
+      <div class="education-header">
+        <h4 class="education-title">{{ item.title }}</h4>
+        <span class="education-location">{{ item.location }}</span>
+      </div>
+      <div class="education-details">
+        <p class="education-degree">{{ item.sub_title }}</p>
+        <span class="education-period">{{ item.caption }}</span>
+      </div>
+      {% if item.description %}
+        <p class="education-description">{{ item.description | strip | markdownify }}</p>
+      {% endif %}
+    </div>
+  </div>
+  {% elsif item.type == 'project' %}
+  <div class="row clearfix project-item">
+    <div class="col-xs-12">
+      <div class="project-container">
+        <div class="project-content">
+          <div class="project-header">
+            <h4 class="project-title">Title: {{ item.title }}</h4>
+          </div>
+          <div class="project-details">
+            <p class="project-role"><strong>Role:</strong> {{ item.role }}</p>
+            <p class="project-timeline"><strong>Timeline:</strong> {{ item.timeline }}</p>
+            <div class="project-description">
+              <strong>Project Description:</strong>
+              <p>{{ item.description | strip | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            </div>
+          </div>
+        </div>
+        {% if item.image %}
+        <div class="project-image">
+          <img src="{{ item.image }}" alt="{{ item.title }}" />
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% else %}
   <div class="row clearfix layout layout-{{item.layout | default: 'left'}} border-{{item.border | default: 'no'}} {{ item.type | default: 'general' }}">
-    <div class="col-xs-12 details {% if item.type == 'publication' %}text-center{% endif %}">
-      
+    <div class="col-xs-12 details">
       <!-- 제목 -->
       <h4 id="{{ item.title | slugify }}">{{ item.title }}</h4>
       
-      <!-- 학위 또는 저자 이름 -->
-      {% if item.type == 'education' %}
-        <p class="major"><b>{{ item.sub_title }}</b></p>
-      {% elsif item.type == 'publication' and item.authors %}
-        <p class="authors"><b>{{ item.authors }}</b></p>
-      {% endif %}
-      
-      <!-- 기간 또는 설명 -->
       {% if item.description %}
-      <p class="description">{{ item.description | strip | markdownify }}</p>
+        <p class="description">{{ item.description | strip | markdownify }}</p>
       {% endif %}
       
-      {% if item.type == 'education' %}
-        <p class="period">{{ item.caption }}</p>
-      {% endif %}
-      
-      <!-- 링크 -->
       {% if item.link %}
         <p> 
           {% include a.html href=item.link class="link" %}
@@ -30,7 +101,6 @@
         </p>
       {% endif %}
       
-      <!-- 추가 링크 -->
       {% if item.additional_links %}
         <p class="no-print additional-links">
           {% for link in item.additional_links %}
@@ -42,4 +112,5 @@
       {% endif %}
     </div>
   </div>
+  {% endif %}
 {% endfor %}

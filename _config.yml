@@ -7,16 +7,19 @@ version: 2
 
 # Personal info
 name: Mintaek Oh
-title: Master's Student
+title: M.S./Ph.D. Candidate
+lab: Autonomous Robot Intelligence Lab
+department: Dept. of Civil & Environmental Engineering
+university: Seoul National University
 email: mintaek@snu.ac.kr
 # email_title: Email (Email title override)
-# phone: Your phone number (optional)
+phone: +82-10-9079-5086
 # phone_title: Phone (Phone title override)
 # website: Your website (eg. https://google.com)(optional)
 # website_title: Web (Website title override)
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: never
 
 # Social links
 # twitter_username: jekyllrb
@@ -52,56 +55,87 @@ linkedin_username: mintaekoh
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  I am Mintaek Oh, a master's student in the Department of Civil and Environmental Engineering at Seoul National University, specializing in Smart Urban Engineering. I am advised by [Prof. Seong-Woo Kim](https://arisnu.squarespace.com/director).
+  I am Mintaek Oh, a master's student in the Department of Civil and Environmental Engineering at Seoul National University, specializing in Smart City Engineering. I am advised by [Prof. Seong-Woo Kim](https://arisnu.squarespace.com/director).
   
   Research Interests
     - **Planning**: Developing advanced path-planning algorithms for robots and autonomous systems.
     - **Control**: Researching control systems for stable and efficient robotics.
     - **Large Language Models (LLM)**: Exploring the integration of LLMs into robotics.
 
-
 content:
-  # Publications
-  - title: Publications
-    layout: list
-    content:
-      - layout: center
-        type: publication
-        title: "E2Map: Experience-and-Emotion Map for Self-Reflective Robot Navigation with Language Models"
-        authors: "Chan Kim, Keonwoo Kim, Mintaek Oh, Hanbi Baek, Jiyang Lee, Donghwi Jung, Soojin Woo, Younkyung Woo, John Tucker, Roya Firoozi, Seung-Woo Seo, Mac Schwager, Seong-Woo Kim"
-        link: https://e2map.github.io/
-        additional_links:
-          - title: GitHub Repository
-            icon: fab fa-github
-            url: https://github.com/knwoo/e2map
-          - title: ArXiv Paper
-            icon: fas fa-file-pdf
-            url: https://arxiv.org/abs/2409.10027
-        description: |
-          This research introduces a novel approach to robot navigation, leveraging experience and emotion mapping powered by Large Language Models (LLMs).
-  
-    # Education
+
+  # Education
   - title: Education
     layout: list
     content:
       - layout: left
         type: education
         title: Seoul National University
-        sub_title: M.S. in Smart Urban Engineering
+        location: "Seoul, S.Korea"
+        sub_title: M.S./Ph.D. Candidate in Department of Civil & Environmental Engineering
         caption: Mar. 2024 - Present
-        description: |
-          **Advised by [Prof. Seong-Woo Kim](https://arisnu.squarespace.com/director)**
       - layout: left
         type: education
         title: Korea University
-        sub_title: B.S. in Mechanical Engineering
+        location: "Seoul, S.Korea"
+        sub_title: B.S. in Department of Mechanical Engineering
         caption: Mar. 2019 - Feb. 2024
-      - layout: top-right
-        type: education
-        title: Inha University
-        sub_title: Coursework in Mechanical Engineering
-        caption: Mar. 2017 - Feb. 2019
 
+  # Publications
+  - title: Publications
+    layout: list
+    content:
+      - layout: left
+        type: publication-year
+        year: "2025"
+      - layout: left
+        type: publication
+        title: "Language as Cost: Proactive Hazard Mapping using VLM for Robot Navigation"
+        authors: "**Mintaek Oh**, Chan Kim, and Seong-Woo Kim"
+        venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Hangzhou, China, 2025"
+        additional_links:
+          - title: ArXiv
+            icon: fas fa-file-pdf
+            url: https://arxiv.org/pdf/2508.03138
+          - title: GitHub
+            icon: fab fa-github
+            url: https://github.com/Taekmino/LaC
+      - layout: left
+        type: publication
+        title: "E2Map: Experience-and-Emotion Map for Self-Reflective Robot Navigation with Language Models"
+        authors: "Chan Kim*, Keonwoo Kim*, **Mintaek Oh**, Hanbi Baek, Jiyang Lee, Donghwi Jung, Soojin Woo, Younkyung Woo, John Tucker, Roya Firoozi, Seung-Woo Seo, Mac Schwager, Seong-Woo Kim"
+        venue: "IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025"
+        additional_links:
+          - title: Homepage
+            icon: fas fa-home
+            url: https://e2map.github.io/
+          - title: ArXiv
+            icon: fas fa-file-pdf
+            url: https://arxiv.org/pdf/2409.10027
+          - title: GitHub
+            icon: fab fa-github
+            url: https://github.com/knwoo/e2map
+
+  # Projects
+  - title: Projects
+    layout: list
+    content:
+      - layout: left
+        type: project
+        title: "LIMBOv2: Indoor Humanoid Robot Using Tools"
+        role: "Project Manager, System Design, Locomotion Learning, Navigation, Language Model Grounding"
+        timeline: "February 2025 - Present"
+        image: "images/g1.png"
+        description: |
+          Developed a humanoid robot equipped with tools for complex indoor tasks. The system incorporates tool usage considerations for dynamic replanning and features language-guided navigation with adaptive strategy execution based on task constraints.
+      - layout: left
+        type: project
+        title: "LIMBO: Language-Image-based Mobile Robot"
+        role: "Path Planning & Control Module Development, Virtual/Real Environment Setup"
+        timeline: "February 2024 - September 2024"
+        image: "images/go1.png"
+        description: |
+          Designed to navigate toward specified goals by following language instructions. Inspired by human emotional mechanisms, we integrate emotion into LIMBO, allowing it to adjust its behavior in a one-shot manner based on a single experience.
 
   # - title: Projects # Title for the section
   #   layout: list # Type of content section (list/text)
