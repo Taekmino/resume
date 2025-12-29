@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Mintaek Oh
-title: M.S./Ph.D. Candidate
+title: Ph.D. Candidate
 lab: Autonomous Robot Intelligence Lab
 department: Dept. of Civil & Environmental Engineering
 university: Seoul National University
@@ -136,6 +136,39 @@ content:
         image: "images/go1.png"
         description: |
           Designed to navigate toward specified goals by following language instructions. Inspired by human emotional mechanisms, we integrate emotion into LIMBO, allowing it to adjust its behavior in a one-shot manner based on a single experience.
+
+  # Teaching Experience
+  - title: Teaching Experience
+    layout: list
+    content:
+      - layout: left
+        type: teaching
+        course: "How to Make a Robot with Artificial Intelligence, Fall 2025"
+        institution: "Seoul National University"
+        role: "Teaching Assistant"
+        images:
+          - "images/final_picture_25.jpg"
+          - "images/roingong25.png"
+        description:
+          - "Instructed ROS2 & Gazebo-based autonomous robot navigation course"
+          - "Guided students to implement language-guided mobile robot navigation system with Unitree Go1 quadruped robot"
+          - "Managed and organized final project competition"
+        link: https://github.com/roy9852/make_ai_robot
+        link_icon: fab fa-github
+      - layout: left
+        type: teaching
+        course: "How to Make a Robot with Artificial Intelligence, Fall 2024"
+        institution: "Seoul National University"
+        role: "Teaching Assistant"
+        images:
+          - "images/final_photo_24.jpg"
+          - "images/roingong24.png"
+        description:
+          - "Instructed ROS1 & Gazebo-based autonomous robot navigation course"
+          - "Developed mission scenarios and simulation environment for language-guided robot navigation projects"
+          - "Managed and organized final project competition"
+        link: https://github.com/Taekmino/craip
+        link_icon: fab fa-github
 
   # - title: Projects # Title for the section
   #   layout: list # Type of content section (list/text)

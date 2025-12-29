@@ -414,3 +414,133 @@ p.quote {
     }
   }
 }
+
+/* Teaching Experience 섹션 스타일 */
+.teaching-item {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
+  .teaching-container {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  
+  .teaching-content {
+    flex: 1;
+    
+    .teaching-header {
+      margin-bottom: 1rem;
+      
+      .teaching-course {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: inherit;
+        margin: 0;
+        margin-bottom: 0.3rem;
+      }
+      
+      .teaching-institution {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: inherit;
+        margin: 0;
+      }
+    }
+    
+    .teaching-details {
+      .teaching-role {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+        color: inherit;
+        
+        strong {
+          font-weight: 600;
+        }
+      }
+      
+      .teaching-description {
+        margin-top: 0.8rem;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        
+        li {
+          font-size: 1.4rem;
+          line-height: 1.6;
+          margin-bottom: 0.5rem;
+          color: inherit;
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      
+      .teaching-link {
+        margin-top: 1rem;
+        
+        .teaching-link-btn {
+          display: inline-block;
+          font-size: 1.4rem;
+          color: #0066cc;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          border: 1px solid #0066cc;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+          
+          i {
+            margin-right: 0.3rem;
+          }
+          
+          &:hover {
+            background-color: #0066cc;
+            color: white;
+          }
+          
+          @media (prefers-color-scheme: dark) {
+            color: #5dade2;
+            border-color: #5dade2;
+            
+            &:hover {
+              background-color: #5dade2;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .teaching-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;
+    width: 250px;
+    
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .teaching-image {
+    width: 100%;
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

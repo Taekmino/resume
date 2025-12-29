@@ -64,7 +64,7 @@
       <div class="project-container">
         <div class="project-content">
           <div class="project-header">
-            <h4 class="project-title">Title: {{ item.title }}</h4>
+            <h4 class="project-title">{{ item.title }}</h4>
           </div>
           <div class="project-details">
             <p class="project-role"><strong>Role:</strong> {{ item.role }}</p>
@@ -78,6 +78,45 @@
         {% if item.image %}
         <div class="project-image">
           <img src="{{ item.image }}" alt="{{ item.title }}" />
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% elsif item.type == 'teaching' %}
+  <div class="row clearfix teaching-item">
+    <div class="col-xs-12">
+      <div class="teaching-container">
+        <div class="teaching-content">
+          <div class="teaching-header">
+            <h4 class="teaching-course">{{ item.course }}</h4>
+            <p class="teaching-institution">{{ item.institution }}</p>
+          </div>
+          <div class="teaching-details">
+            <p class="teaching-role"><strong>Role:</strong> {{ item.role }}</p>
+            {% if item.description %}
+            <ul class="teaching-description">
+              {% for bullet in item.description %}
+              <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% if item.link %}
+            <div class="teaching-link">
+              {% include a.html href=item.link class="teaching-link-btn" %}
+                <i class="{{ item.link_icon }}"></i> GitHub Repository
+              </a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% if item.images %}
+        <div class="teaching-images">
+          {% for image in item.images %}
+          <div class="teaching-image">
+            <img src="{{ image }}" alt="{{ item.course }}" />
+          </div>
+          {% endfor %}
         </div>
         {% endif %}
       </div>
